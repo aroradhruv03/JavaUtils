@@ -1,12 +1,12 @@
 package Main;
 
-import String.StringUtils;
+import Utils.StringUtils;
 
 /**
  * @author Dhruv
  * @Version 1.0
  *
- * Main Class to implement and show as examples the Utils Method implemented
+ * Main Class to implement the required utility as an example.
  *
  * @Contains: toCamelCase;
  */
@@ -14,8 +14,10 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        /** toCamelCase **/
+        /** toCamelCase Example **/
         String s = StringUtils.toCamelCase("wE are tHe monks.!");
         System.out.println(s);
+
+
     }
 }

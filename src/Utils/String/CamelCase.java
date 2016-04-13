@@ -1,4 +1,4 @@
-package String.Utils;
+package Utils.String;
 
 /**
  * @author Dhruv
@@ -16,11 +16,11 @@ public class CamelCase{
      *
      * Uses Java's own toUpper and toLower methods.
      *
-     * Possible bugs - Only capitalizes a sentence or word after a 'space' not a 'full-stop'.
+     * Possible bugs/problems or Future Upgrades -> Only capitalizes a sentence or word after a 'space' not a 'full-stop'.
      *
-     * @param str: The input String which is to be converted.
-     * @return : the String after being converted to camel case
-     * @throws : NullPointerException if the String encountered was null
+     * @param str: The input Utils.String which is to be converted.
+     * @return : the Utils.String after being converted to camel case
+     * @throws : NullPointerException if the Utils.String encountered was null. This is to ensure that the user doesn't pass a null and forget about it.
      */
     public String toCamelCase(String str) throws NullPointerException{
         str = str.trim();
@@ -28,13 +28,13 @@ public class CamelCase{
         int strLength;
 
         if (str == null)
-            throw new NullPointerException("The String entered was null");
+            throw new NullPointerException("The Utils.String entered was null");
 
         if( (strLength = str.length()) == 0 )
             return "empty string";
 
-        /** Split each line into it's constituent properties, then the result is stored in a string array. **/
-        String delimited[] = str.split("\\ ");;
+        /** Split the string into it's constituent properties, then the result is stored in a string array. **/
+        String delimited[] = str.split("\\ ");
 
         /** This array will store the result **/
         String camelCase="";

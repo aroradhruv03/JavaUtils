@@ -1,12 +1,12 @@
-package String;
+package Utils;
 
-import String.Utils.CamelCase;
+import Utils.String.CamelCase;
 
 /**
  * @author Dhruv
  * @Version 1.0
  *
- * Class to implement all the String Util methods. The is the middleware class, which passes the call to the respective function.
+ * Class to implement all the Utils.String Util methods. The is the middleware class, which passes the call to the respective function.
  *
  * @Contains Classes: toCamelCase;
  */
@@ -14,6 +14,7 @@ public class StringUtils {
 
     /**
      * @Version - 1.0
+     * -- Not the actual implementation method. --
      * Converts this String literal into a Camel Case. Such that each word begins with a capital letter.
      * Also removes any trailing or leading whitespaces.
      *
