@@ -3,11 +3,19 @@ A small project to construct various small utilites to make your programming exp
 
 These utilities are nothing but just small java code so that you don't have to code it or so that it's easier for you to understand a particular concept.
 
-Functions Included:
+Functions Built:
 
     1. to CameCase: Converts a Utils.String input to Camel Case. - Ver 1.2.
 
-Programs Included:
+Library Built:
+
+    #IO Library: To make your IO File operations easier.
+        1. ReadFile: For your Input operation to a file.
+            No need to know how to write too much code, just know the file name.
+        2. WriteFile: For file output operations.
+            No need to remember complex code for doing some basic write operations to a File.
+
+Programs Included (will make UI for these soon and provide them as standalone):
 
     1. Mouse Move: This small program keeps moving your mouse pointer at definite intervals of time.
         This prevents the PC from shutting off the screen or from locking you out every 60sec..!
