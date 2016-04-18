@@ -1,11 +1,16 @@
 # JavaUtils
-A small project to construct various small utilites to make your programming experience easier.
+
+A small project to construct various small utilities to make your programming experience easier.
 
 These utilities are nothing but just small java code so that you don't have to code it or so that it's easier for you to understand a particular concept.
 
 Functions Built:
 
-    1. to CameCase: Converts a Utils.String input to Camel Case. - Ver 1.2.
+    1. toCameCase: Converts a String input to Camel Case. - Ver 1.2
+    2. checkIfPalindrome: Checks if a given string is a palindrome or not. - Ver 1.0
+    3. checkIfPalindromeIgnoreCase: Checks if a given string is a palindrome or not ignoring case. - Ver 1.0
+    4. reverse: Reverses a given string, but does not deal with UTF-16 surrogate pairs. (reverse using n/2 time, using char array) - Ver 1.0
+    5. reverseSafe: Reverses a given string, takes care of the UTF-16 surrogate pairs. (uses reverse of StringBuilder of java) - Ver 1.0
 
 Library Built:
 

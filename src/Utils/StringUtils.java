@@ -1,6 +1,8 @@
 package Utils;
 
 import Utils.String.CamelCase;
+import Utils.String.CheckPalindrome;
+import Utils.String.Reverse;
 
 /**
  * @author Dhruv
@@ -23,7 +25,13 @@ public class StringUtils {
      * @param str: The input String which is to be converted.
      * @return : the String after being converted to camel case
      */
-    public static String toCamelCase(String str){
-        return new CamelCase().toCamelCase(str);
-    }
+    public static String toCamelCase(String str){ return new CamelCase().toCamelCase(str); }
+
+    public static boolean checkIfPalindrome(String str){ return new CheckPalindrome().checkIfPalindrome(str); }
+
+    public static boolean checkIfPalindromeIgnoreCase(String str){ return new CheckPalindrome().checkIfPalindromeIgnoreCase(str); }
+
+    public static String reverse(String str){ return new Reverse().reverse(str); }
+
+    public static String reverseSafe(String str){ return new Reverse().reverseSafe(str); }
 }

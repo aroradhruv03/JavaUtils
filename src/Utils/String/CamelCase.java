@@ -18,9 +18,9 @@ public class CamelCase{
      *
      * Possible bugs/problems or Future Upgrades -> Only capitalizes a sentence or word after a 'space' not a 'full-stop'.
      *
-     * @param str: The input Utils.String which is to be converted.
-     * @return : the Utils.String after being converted to camel case
-     * @throws : NullPointerException if the Utils.String encountered was null. This is to ensure that the user doesn't pass a null and forget about it.
+     * @param str: The input String which is to be converted.
+     * @return : the String after being converted to camel case
+     * @throws : NullPointerException if the String encountered was null. This is to ensure that the user doesn't pass a null and forget about it.
      */
     public String toCamelCase(String str) throws NullPointerException{
         str = str.trim();
