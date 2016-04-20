@@ -23,32 +23,34 @@ public class ReadFile {
     // Will store the regex to split each line by. Default is tab-seperated.
     private String regex = "\t";
 
-    private BufferedReader bufferedReader;
+    private BufferedReader currentReader;
 
     // Define the Directory and the File path
     private String dirName = "Sample_Inp";
 
     public ReadFile(String fileName) {
         this.fileName = fileName;
-        initiateBufferedReader(fileName);
+        this.currentReader = initiateBufferedReader();
 
     }
 
     public ReadFile(String fileName, String regex) {
         this.fileName = fileName;
         this.regex = regex;
-        initiateBufferedReader(fileName);
+        this.currentReader = initiateBufferedReader();
     }
 
 
-    private void initiateBufferedReader(String fileName) {
+    private BufferedReader initiateBufferedReader() {
         try {
-            this.bufferedReader = new BufferedReader(new FileReader(fileName));
+            return new BufferedReader(new FileReader(fileName));
         } catch (FileNotFoundException fnfe) {
             fnfe.printStackTrace();
         } catch (Exception exception) {
             exception.printStackTrace();
         }
+
+        return null;
     }
 
     public String readNext() {
@@ -56,7 +58,7 @@ public class ReadFile {
             // Stores each line
             String line;
 
-            line = bufferedReader.readLine(); // read a line
+            line = currentReader.readLine(); // read a line
 
             return line;
         } catch (Exception exception) {
@@ -65,9 +67,30 @@ public class ReadFile {
         return null;
     }
 
+    public void printFile()
+    {
+        try {
+
+            BufferedReader reader = initiateBufferedReader();
+
+            System.out.println("Priting the file: "+fileName+" ->");
+            // Stores each line
+            String lineRead ;
+
+            while( (lineRead = reader.readLine()) !=null)
+            {
+                // Do here what you want with the line read, split it or store in array.!
+                System.out.println(lineRead);
+            }
+
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
+
     public void cleanUp() {
         try {
-            bufferedReader.close();
+            currentReader.close();
         } catch (Exception exception) {
             exception.printStackTrace();
         }
