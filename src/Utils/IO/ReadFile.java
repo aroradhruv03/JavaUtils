@@ -1,6 +1,9 @@
 package Utils.IO;
 
+import b.e.j.a.T;
+
 import java.io.*;
+import java.util.ArrayList;
 
 /**
  * @author - Dhruv
@@ -67,6 +70,9 @@ public class ReadFile {
         return null;
     }
 
+    /**
+     *
+     */
     public void printFile()
     {
         try {
@@ -82,11 +88,20 @@ public class ReadFile {
                 // Do here what you want with the line read, split it or store in array.!
                 System.out.println(lineRead);
             }
+            System.out.println("### END of file ###");
 
         } catch (Exception exception) {
             exception.printStackTrace();
         }
     }
+
+    // TODO
+    public ArrayList<T> copyToArray(){
+
+        return null;
+    }
+
+
 
     public void cleanUp() {
         try {

@@ -22,6 +22,12 @@ public class WriteFile {
 
     Boolean fileOverride = true;
 
+    /**
+     * Use  to copy the source file to a new file
+     * @param oldFileName
+     * @param newFileName
+     * @return
+     */
     public boolean copyFile(String oldFileName, String newFileName)
     {
         ReadFile r = new ReadFile(oldFileName);
@@ -64,6 +70,15 @@ public class WriteFile {
         }
         // If failed return false
 //		System.out.println("Coudn't Save ...");
+        return false;
+    }
+
+    /**
+     * TODO
+     * @param fileName
+     * @return
+     */
+    public boolean replaceFile(String fileName){
         return false;
     }
 
